@@ -1,0 +1,58 @@
+[
+  {
+    "name": "max length all nines",
+    "l1_len": 100,
+    "l1_fill": 9,
+    "l2_len": 100,
+    "l2_fill": 9
+  },
+  {
+    "name": "max length all fives",
+    "l1_len": 100,
+    "l1_fill": 5,
+    "l2_len": 100,
+    "l2_fill": 5
+  },
+  {
+    "name": "max length no carry",
+    "l1_len": 100,
+    "l1_fill": 1,
+    "l2_len": 100,
+    "l2_fill": 2
+  },
+  {
+    "name": "max vs min leftover carry",
+    "l1_len": 100,
+    "l1_fill": 9,
+    "l2_len": 1,
+    "l2_fill": 1
+  },
+  {
+    "name": "min vs max leftover carry",
+    "l1_len": 1,
+    "l1_fill": 1,
+    "l2_len": 100,
+    "l2_fill": 9
+  },
+  {
+    "name": "max vs min no carry",
+    "l1_len": 100,
+    "l1_fill": 1,
+    "l2_len": 1,
+    "l2_fill": 2
+  },
+  {
+    "name": "max vs max minus one",
+    "l1_len": 100,
+    "l1_fill": 9,
+    "l2_len": 99,
+    "l2_fill": 9
+  },
+  {
+    "name": "max minus one vs max",
+    "l1_len": 99,
+    "l1_fill": 9,
+    "l2_len": 100,
+    "l2_fill": 9
+  }
+]

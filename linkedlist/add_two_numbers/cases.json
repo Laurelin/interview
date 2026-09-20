@@ -1,0 +1,266 @@
+[
+  {
+    "name": "basic",
+    "l1": [2, 4, 3],
+    "l2": [5, 6, 4],
+    "expected": [7, 0, 8]
+  },
+  {
+    "name": "both zero",
+    "l1": [0],
+    "l2": [0],
+    "expected": [0]
+  },
+  {
+    "name": "unequal nines",
+    "l1": [9, 9, 9, 9, 9, 9, 9],
+    "l2": [9, 9, 9, 9],
+    "expected": [8, 9, 9, 9, 0, 0, 0, 1]
+  },
+  {
+    "name": "single digits no carry",
+    "l1": [1],
+    "l2": [2],
+    "expected": [3]
+  },
+  {
+    "name": "single digits carry",
+    "l1": [5],
+    "l2": [5],
+    "expected": [0, 1]
+  },
+  {
+    "name": "single nines",
+    "l1": [9],
+    "l2": [9],
+    "expected": [8, 1]
+  },
+  {
+    "name": "one plus nine",
+    "l1": [1],
+    "l2": [9],
+    "expected": [0, 1]
+  },
+  {
+    "name": "nine plus one",
+    "l1": [9],
+    "l2": [1],
+    "expected": [0, 1]
+  },
+  {
+    "name": "zero plus digit",
+    "l1": [0],
+    "l2": [7],
+    "expected": [7]
+  },
+  {
+    "name": "digit plus zero",
+    "l1": [7],
+    "l2": [0],
+    "expected": [7]
+  },
+  {
+    "name": "zero plus multi",
+    "l1": [0],
+    "l2": [1, 2, 3],
+    "expected": [1, 2, 3]
+  },
+  {
+    "name": "multi plus zero",
+    "l1": [1, 2, 3],
+    "l2": [0],
+    "expected": [1, 2, 3]
+  },
+  {
+    "name": "same length no carry",
+    "l1": [1, 2, 3],
+    "l2": [4, 5, 1],
+    "expected": [5, 7, 4]
+  },
+  {
+    "name": "same length final carry",
+    "l1": [9, 9],
+    "l2": [1, 1],
+    "expected": [0, 1, 1]
+  },
+  {
+    "name": "carry then stop",
+    "l1": [5, 1],
+    "l2": [5, 2],
+    "expected": [0, 4]
+  },
+  {
+    "name": "no carry then final carry",
+    "l1": [1, 5],
+    "l2": [2, 5],
+    "expected": [3, 0, 1]
+  },
+  {
+    "name": "internal zeros",
+    "l1": [1, 0, 2],
+    "l2": [3, 0, 4],
+    "expected": [4, 0, 6]
+  },
+  {
+    "name": "internal zeros longer",
+    "l1": [1, 0, 0, 2],
+    "l2": [3, 0, 0, 4],
+    "expected": [4, 0, 0, 6]
+  },
+  {
+    "name": "l1 longer no carry",
+    "l1": [1, 2, 3],
+    "l2": [4, 5],
+    "expected": [5, 7, 3]
+  },
+  {
+    "name": "l2 longer no carry",
+    "l1": [4, 5],
+    "l2": [1, 2, 3],
+    "expected": [5, 7, 3]
+  },
+  {
+    "name": "l1 longer leftover carry",
+    "l1": [9, 9, 9],
+    "l2": [1],
+    "expected": [0, 0, 0, 1]
+  },
+  {
+    "name": "l2 longer leftover carry",
+    "l1": [1],
+    "l2": [9, 9, 9],
+    "expected": [0, 0, 0, 1]
+  },
+  {
+    "name": "carry dies in longer l1",
+    "l1": [9, 1, 2],
+    "l2": [1],
+    "expected": [0, 2, 2]
+  },
+  {
+    "name": "carry dies in longer l2",
+    "l1": [1],
+    "l2": [9, 1, 2],
+    "expected": [0, 2, 2]
+  },
+  {
+    "name": "carry through then stop",
+    "l1": [9, 9, 1, 2],
+    "l2": [1],
+    "expected": [0, 0, 2, 2]
+  },
+  {
+    "name": "length differs by one",
+    "l1": [1, 2],
+    "l2": [3, 4, 5],
+    "expected": [4, 6, 5]
+  },
+  {
+    "name": "length one vs two",
+    "l1": [1],
+    "l2": [2, 3],
+    "expected": [3, 3]
+  },
+  {
+    "name": "short plus nines extra node",
+    "l1": [1],
+    "l2": [9, 9],
+    "expected": [0, 0, 1]
+  },
+  {
+    "name": "nines plus short extra node",
+    "l1": [9, 9],
+    "l2": [1],
+    "expected": [0, 0, 1]
+  },
+  {
+    "name": "first digits sum to ten",
+    "l1": [1, 2],
+    "l2": [9, 3],
+    "expected": [0, 6]
+  },
+  {
+    "name": "middle carry only",
+    "l1": [1, 9, 1],
+    "l2": [2, 1, 1],
+    "expected": [3, 0, 3]
+  },
+  {
+    "name": "both mid carry extra node",
+    "l1": [5, 5],
+    "l2": [5, 5],
+    "expected": [0, 1, 1]
+  },
+  {
+    "name": "nines around zero extra node",
+    "l1": [9, 0, 9],
+    "l2": [1, 9],
+    "expected": [0, 0, 0, 1]
+  },
+  {
+    "name": "carry into nines of longer",
+    "l1": [1],
+    "l2": [9, 9, 0, 1],
+    "expected": [0, 0, 1, 1]
+  },
+  {
+    "name": "all ones",
+    "l1": [1, 1, 1],
+    "l2": [1, 1, 1],
+    "expected": [2, 2, 2]
+  },
+  {
+    "name": "sum digits max no extra",
+    "l1": [4, 4],
+    "l2": [5, 4],
+    "expected": [9, 8]
+  },
+  {
+    "name": "lowest nonzero",
+    "l1": [1],
+    "l2": [1],
+    "expected": [2]
+  },
+  {
+    "name": "result internal zero from carry",
+    "l1": [5, 0, 1],
+    "l2": [5, 0, 1],
+    "expected": [0, 1, 2]
+  },
+  {
+    "name": "long tail no carry",
+    "l1": [1, 2, 3, 4, 5],
+    "l2": [9],
+    "expected": [0, 3, 3, 4, 5]
+  },
+  {
+    "name": "unequal extra node from high digit",
+    "l1": [1, 2, 9],
+    "l2": [9, 8],
+    "expected": [0, 1, 0, 1]
+  },
+  {
+    "name": "unequal high digit absorbs carry",
+    "l1": [1, 2, 8],
+    "l2": [9, 8],
+    "expected": [0, 1, 9]
+  },
+  {
+    "name": "beyond js safe integer",
+    "l1": [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+    "l2": [1],
+    "expected": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+  },
+  {
+    "name": "beyond signed 64-bit",
+    "l1": [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+    "l2": [1],
+    "expected": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+  },
+  {
+    "name": "beyond unsigned 64-bit",
+    "l1": [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+    "l2": [1],
+    "expected": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+  }
+]
